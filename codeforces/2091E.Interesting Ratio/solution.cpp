@@ -1,7 +1,34 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+/*
+    Author: hoang.ngzz
+    From : HaNoi Open University - FITHOU
+    Created at: 26/05/2025 -- 22:28
+*/
+
+#include <bits/stdc++.h>
 using namespace std;
+#define int long long
+#define F first
+#define S second
+#define pb push_back
+#define vi vector<int>
+#define vvi vector<vector<int>>
+#define di deque<int>
+#define endl '\n'
+#define sz(x) ((int)x.size())
+#define all(p) p.begin(), p.end()
+#define print(a)          \
+    for (auto x : a)      \
+        cout << x << " "; \
+    cout << endl
+#define print1(a)    \
+    for (auto x : a) \
+    cout << x.F << " " << x.S << endl
+#define input(a, x, y)          \
+    for (int i = x; i < y; i++) \
+        cin >> a[i] " ";        \
+    cout << endl
+#define no "NO\n"
+#define yes "YES\n"
 
 vector<bool> generatePrimes(int maxLimit)
 {
@@ -39,8 +66,11 @@ int countInterestingRatios(int n, const vector<bool> &isPrime)
     return count;
 }
 
-int main()
+int32_t main()
 {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
     int t;
     cin >> t;
 
