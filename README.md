@@ -20,6 +20,7 @@ This repo contains solutions to various algorithmic problems from popular platfo
 Primarily written in:
 - C++
 - Golang
+- Java
 
 ## 🎯 Goals
 
