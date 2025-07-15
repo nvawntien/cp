@@ -1,5 +1,6 @@
 class Solution {
     private List<List<Integer>> edges = new ArrayList<>();
+    
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if (!wordList.contains(endWord) || beginWord.equals(endWord)) return 0;
         wordList.add(0, beginWord);
