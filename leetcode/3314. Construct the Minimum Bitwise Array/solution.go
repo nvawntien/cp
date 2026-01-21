@@ -12,4 +12,4 @@ func minBitwiseArray(nums []int) []int {
     }
 
     return ans
-}
+}z
