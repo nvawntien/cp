@@ -5,7 +5,6 @@ type Point struct {
 func minCost(grid [][]int, k int) int {
     m := len(grid)
     n := len(grid[0])
-
     dp := make([][][]int, k+1)
 
     for i := range dp {
@@ -19,7 +18,6 @@ func minCost(grid [][]int, k int) int {
     }
 
     dp[0][0][0] = 0
-
     groups := make(map[int][]Point)
 
     for r := 0; r < m; r++ {
@@ -30,7 +28,6 @@ func minCost(grid [][]int, k int) int {
     }
 
     var sortedVals []int 
-
     for val := range groups {
         sortedVals = append(sortedVals, val)
     }
@@ -66,13 +63,11 @@ func minCost(grid [][]int, k int) int {
             for _, val := range sortedVals {
                 points := groups[val]
                 curr := math.MaxInt64
-
                 for _, p := range points {
                     curr = min(curr, dp[t][p.r][p.c])
                 }
 
                 minCostFound = min(minCostFound, curr)
-
                 if minCostFound != math.MaxInt64 {
                     for _, p := range points {
                         dp[t+1][p.r][p.c] = min(dp[t+1][p.r][p.c], minCostFound)
